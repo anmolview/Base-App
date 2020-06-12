@@ -136,7 +136,7 @@ class RouterController extends Controller
         $router->update($request->all());
   
         return redirect()->route('router.index')
-                        ->with('success','Details updated successfully');
+                        ->with('success','Detail updated successfully');
     }
 
     /**
