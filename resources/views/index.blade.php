@@ -72,8 +72,8 @@ $('#router').DataTable({
   });
 
   $(document).on('click', '.delete-router', function(){
-    var elementRef = $(this);
-    var id = elementRef.attr('data-id');
+    var elm = $(this);
+    var id = elm.attr('data-id');
     url = "{{route('router.destroy',":id")}}";
     url = url.replace(':id', id);
     $.ajax({
@@ -83,7 +83,7 @@ $('#router').DataTable({
         'X-CSRF-TOKEN': "{{ csrf_token() }}"
       },
       success: function(response) {
-        elementRef.parent().parent().remove();
+        elm.parent().parent().remove();
         $('#alert').html('<div class="alert alert-success mt-1"><p>'+response.message+'</p></div>');
       },
       error: function(error) {

@@ -119,7 +119,7 @@ class RouterController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request  $requests
      * @param  \App\model\router  $router
      * @return \Illuminate\Http\Response
      */
